@@ -1,0 +1,36 @@
+ALGORITHM algorithm_name
+VAR
+    set_declarations
+Variables
+    char: Character
+    length, words, vowels: Integer
+
+Begin
+    length := 0
+    words ← 0
+    vowels ← 0
+
+    Write("Enter a sentence :")
+    Read(char)
+
+    While char !=  '.'
+        length ← length + 1
+
+        If char = ' ' Then
+            words ← words + 1
+        End_If
+
+        If char = 'a' OR char = 'e' OR char = 'i' OR char = 'o' OR char = 'u' OR
+           char = 'A' OR char = 'E' OR char = 'I' OR char = 'O' OR char = 'U' Then
+            vowels ← vowels + 1
+        End_If
+
+        Read(char)
+    End_While
+
+    words ← words + 1
+
+    Write("Length of the sentence: ", length)
+    Write("Number of words: ", words)
+    Write("Number of vowels: ", vowels)
+End
